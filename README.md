@@ -34,7 +34,7 @@ Found in http_request -> state
 * **HTTP_VERSION_START**: Allocation of memory for the version C string
 * **HTTP_VERSION**: Where the version is copied to the version C string 
 * **HTTP_HEADER_START**: Allocation for where to store the key and value of a header
-* **HTTP_HEADER_FIND_AND_PARSE**, Parses header and stores it in the headers data structure. State will move back to HEADER_START if there are more headers.
+* **HTTP_HEADER_FIND_AND_PARSE**, Parses header and stores it in the headers data structure. State will move back to HTTP_HEADER_START if there are more headers.
 * **HTTP_BODY_START**: Allocation for the body C string
 * **HTTP_BODY**: Where the body is copied to the body C string
 * **HTTP_FINISHED**: The HTTP Request has been parsed succesfully
@@ -63,7 +63,7 @@ Example of key with multiple values:
 *Set-Cookie: cookie1\r\n*
 *Set-Cookie: cookie2\r\n*
 
-**get_last_header(headers_t *headers, char *key)**: Gets the last added value with the header key 'key'. Returns the value, or 0 if not found
+**get_last_header(headers_t *headers, char *key)**: Gets the last added value with the header key 'key'. Returns the value, or 0 if not found <br>
 **get_header(headers_t *headers, char *key, uint64_t val_index)**: Gets the 'val_index' added value with the header key 'key'. Returns value ,or 0 if not found
 
 ## HTTP Parse Type(http_request_t) Functions:
