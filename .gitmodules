@@ -1,0 +1,6 @@
+[submodule "libs/HashMap"]
+	path = libs/HashMap
+	url = https://github.com/seamoose44499958/HashMap.git
+[submodule "libs/Array"]
+	path = libs/Array
+	url = https://github.com/seamoose44499958/Array.git
